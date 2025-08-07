@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Application for Permission</title>
+  <style>
+    body {
+      background-color: #fff9db;
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+    }
+
+    .container {
+      background-color: white;
+      width: 760px;
+      margin: 30px auto;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .note {
+      font-size: 13px;
+      margin-bottom: 15px;
+    }
+
+    fieldset {
+      border: 1px solid #ccc;
+      padding: 10px 15px 15px 15px;
+      margin-bottom: 15px;
+    }
+
+    legend {
+      padding: 0 10px;
+      font-weight: bold;
+    }
+
+    .form-row {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      margin-bottom: 10px;
+    }
+
+    .form-row label {
+      margin: 0;
+    }
+
+    .form-row input[type="text"],
+    .form-row input[type="email"],
+    .form-row input[type="tel"],
+    .form-row input[type="date"],
+    .form-row select {
+      width: 200px;
+      padding: 4px;
+      font-size: 13px;
+      margin: 0;
+    }
+
+    textarea {
+      width: 100%;
+      height: 50px;
+      resize: vertical;
+    }
+
+    .checkbox-group label,
+    .radio-group label {
+      display: block;
+      margin-top: 5px;
+    }
+
+    .form-row .radio-group {
+      display: flex;
+      gap: 10px;
+    }
+
+    .upload-row {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin-top: 10px;
+    }
+
+    .upload-row span {
+      flex: 1;
+    }
+
+    .upload-button {
+      background-color: red;
+      color: white;
+      border: none;
+      padding: 5px 12px;
+      border-radius: 4px;
+      font-size: 13px;
+      cursor: pointer;
+    }
+
+    .upload-button:hover {
+      background-color: darkred;
+    }
+
+    .submit-button {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .submit-button button {
+      background-color: red;
+      color: white;
+      border: none;
+      padding: 6px 16px;
+      font-size: 13px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .submit-button button:hover {
+      background-color: darkred;
+    }
+
+    .double-row {
+      display: flex;
+      gap: 5px;
+      margin-bottom: 10px;
+      font-size: 11px;
+      align-items: center;
+    }
+
+    .double-row .form-row  {
+      flex: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Application For Permission To Date My Daughter</h2>
+    <p class="note"><strong>Note:</strong> Form is to be completed at least 21 days prior to date</p>
+
+    <fieldset>
+      <legend>Personal Details</legend>
+
+      <div class="form-row">
+        <label for="name">Name:</label><input type="text" id="name" placeholder="Enter name here">
+      </div>
+
+      <div class="form-row">
+        <label for="address">Address:</label><input type="text" id="address" placeholder="Enter address here">
+      </div>
+
+      <div class="form-row">
+        <label for="email">Email:</label><input type="email" id="email" placeholder="Enter email here">
+      </div>
+
+      <div class="form-row">
+        <label for="phone">Phone Number:</label><input type="tel" id="phone" placeholder="Enter 10 digit number">
+      </div>
+
+      <div class="form-row">
+        <label for="iq">IQ:</label><input type="text" id="iq" placeholder="Enter IQ here">
+      </div>
+
+      <div class="form-row">
+        <label>Gender:</label>
+        <div class="radio-group">
+          <label><input type="radio" name="gender"> Male</label>
+          <label><input type="radio" name="gender"> Female</label>
+          <label><input type="radio" name="gender"> Other</label>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <label for="date">Date of Proposed Outing:</label><input type="date" id="date">
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <p>Check All That Apply</p>
+      <div class="checkbox-group">
+        <label><input type="checkbox"> I have tattoos and/or piercings</label>
+        <label><input type="checkbox"> I am more than 2 years older than my daughter</label>
+        <label><input type="checkbox"> I own a panel van or VB ute</label>
+        <label><input type="checkbox"> I work full-time</label>
+        <label><input type="checkbox" checked> My parents are rich</label>
+        <label><input type="checkbox" checked> Is the date at a well lit public location</label>
+      </div>
+    </fieldset>
+
+    <fieldset>
+
+      <div class="double-row">
+        <div class="form-row">
+          <label for="political">Political Persuasion:</label>
+          <select id="political">
+            <option>Left Wing</option>
+            <option>Right Wing</option>
+            <option>Center</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label for="education">Education Level Completed:</label>
+          <select id="education">
+            <option>University</option>
+            <option>High School</option>
+            <option>Other</option>
+          </select>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Essay Section</legend>
+      <label>In 50 words or more explain why you want to date my daughter</label>
+      <textarea></textarea>
+      <label>Please upload contact details for 2 references</label>
+      <textarea></textarea>
+
+      <div class="upload-row">
+      <span>Upload Police Clearance Certificate, Bank Statement and Medical Certificates here:</span>
+      <button class="upload-button">Attach Files</button>
+    </div>
+    </fieldset>
+
+  
+
+    <div class="submit-button">
+      <button type="submit">Send Your Application</button>
+    </div>
+  </div>
+</body>
+</html>
+
